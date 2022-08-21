@@ -9,7 +9,7 @@ public class B_Savings  {
         int i = 1;
         long sum = 0;
 
-       while((sum+(i+1)) <= N) {
+       while((sum+(i+1)) < N) {
         sum += i;
         i++;
        }

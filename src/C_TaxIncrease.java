@@ -1,4 +1,3 @@
-import java.math.BigDecimal;
 import java.util.*;
 
 public class C_TaxIncrease  {
@@ -7,14 +6,14 @@ public class C_TaxIncrease  {
         
         double A = scanner.nextInt();
         double B = scanner.nextInt();
-        scanner.close();
+        scanner.close(); 
         Boolean flag = false;
         double tax = 0.0;
         double taxRate1 = 0.08;
         double taxRate2 = 0.10;
         int count = 1;
     
-        while(!flag&&count <= 100)  {
+        while(!flag&&count <= 1250)  {
             tax = Math.floor(count*taxRate1);
             if(tax == A) {
                 tax =  Math.floor(count*taxRate2);

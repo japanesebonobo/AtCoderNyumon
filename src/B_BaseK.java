@@ -5,8 +5,8 @@ public class B_BaseK  {
         Scanner scanner = new Scanner(System.in);
         
         int K = scanner.nextInt();
-        int A = scanner.nextInt();
-        int B = scanner.nextInt();
+        long A = scanner.nextLong();
+        long B = scanner.nextLong();
         scanner.close(); 
         long ans = 0L;
 
@@ -18,7 +18,7 @@ public class B_BaseK  {
         System.out.println(ans);
     }
 
-    public static long converter(int number, int base) {
+    public static long converter(long number, int base) {
         int count = 0;
         long result = 0L;
 

@@ -5,28 +5,17 @@ public class B_DoYouKnowTheSecondHighestMountain  {
         Scanner scanner = new Scanner(System.in);
         
         int N = scanner.nextInt();
-        String name[] = new String[N];
-        int height[] = new int[N];
-        int index = 0;
+        NavigableMap<Integer, String> mountainMap = new TreeMap<>();
 
         for (int i = 0; i < N; i++) {
-            name[i] = scanner.next();
-            height[i] = scanner.nextInt();
+            String name = scanner.next();
+            int height = scanner.nextInt();
+            mountainMap.put(height, name);
         }
         scanner.close();
         
-        int[] sortedheight = Arrays.copyOf(height, N);
+        mountainMap.pollLastEntry();
 
-        Arrays.sort(sortedheight);
-
-        int secondHeight = sortedheight[N-2];
-
-        for (int i = 0; i < N; i++) {
-            if(height[i] == secondHeight) {
-                index = i;
-            }
-        }
-
-        System.out.println(name[index]);
+        System.out.println(mountainMap.pollLastEntry().getValue());
     }
 }

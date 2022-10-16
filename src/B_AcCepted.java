@@ -6,25 +6,32 @@ public class B_AcCepted  {
         
         String S = scanner.next();
         scanner.close();
-        
-        String ans = "AC";
+
+        if (isAC(S)) {
+            System.out.println("AC");
+        } else {
+            System.out.println("WA");
+        }
+    }
+
+    public static boolean isAC(String S) {
 
         char first = S.charAt(0);
         if (first != 'A') {
-            ans = "WA";
+            return false;
         }
 
         String second = S.substring(2,S.length()-1);
         int length = second.length();
         second = second.replace("C", "");
         if (second.length() != length-1) {
-            ans = "WA";
+            return false;
         }
 
         String third = S.replace("A", "").replace("C", "");
         if (!third.toLowerCase().equals(third)) {
-            ans = "WA";
+            return false;
         }
-        System.out.println(ans);
+        return true;
     }
 }

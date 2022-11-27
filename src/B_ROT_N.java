@@ -17,6 +17,4 @@ public class B_ROT_N  {
 
         System.out.println(new String(ans));
     }
-
-    
 }

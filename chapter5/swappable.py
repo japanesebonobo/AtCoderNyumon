@@ -1,6 +1,7 @@
 from collections import defaultdict
 
-def calculator(N, A):
+def calculator(N, A, d):
+    d = defaultdict(int)
     ans = N*(N-1)//2
 
     for i in range(N):
@@ -14,5 +15,4 @@ def calculator(N, A):
 
 N = int(input())
 A = list(map(int,input().split()))
-d = defaultdict(int)
 calculator(N,A)
